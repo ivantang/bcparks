@@ -9,6 +9,26 @@ import AppNavigator from './navigation/AppNavigator';
 import { SQLite } from "expo-sqlite";
 
 const db = SQLite.openDatabase("db.db");
+// create users table
+db.transaction(tx => {tx.executeSql(
+    "create table if not exists users (id integer primary key not null, firstName text, lastName text, points int, userName text, email text, password text);"
+)})
+// create issues table
+db.transaction(tx => {tx.executeSql(
+    "create table if not exists issues (id integer primary key not null, name text, issueDesc text, peopleNeeded int, dollarsNeeded int, dollarsDonated int, state int, reward int);"
+)})
+// create parks table
+db.transaction(tx => {tx.executeSql(
+    "create table if not exists parks (id integer primary key not null, name text, location text);"
+)})
+// create parks x issues table
+db.transaction(tx => {tx.executeSql(
+    "create table if not exists parkIssues (placeholder text);"
+)})
+// create parks x issues table
+db.transaction(tx => {tx.executeSql(
+    "create table if not exists userIssues (placeholder text);"
+)})
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
@@ -29,6 +49,8 @@ export default function App(props) {
       </View>
     );
   }
+
+  db.tr
 }
 
 async function loadResourcesAsync() {
