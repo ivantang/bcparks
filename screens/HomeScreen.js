@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
+import { VolunteerCard } from '../components/VolunteerCard';
 
 export default function HomeScreen() {
   return (
@@ -31,7 +32,10 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
-
+          <VolunteerCard
+            title="SOMETHING"
+            location="SOMEWHERE"
+            points="100" />
           <Text style={styles.getStartedText}>Get started by opening</Text>
 
           <View
