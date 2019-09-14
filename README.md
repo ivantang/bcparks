@@ -2,5 +2,6 @@
 
 ```
 npm install
-expo start
+expo start --ios //for ios
+expo start --web //for web
 ```
