@@ -12,11 +12,18 @@ import {
 
 import { MonoText } from '../components/StyledText';
 import { VolunteerCard } from '../components/VolunteerCard';
+import { DonationCard } from '../components/DonationCard';
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <VolunteerCard
+        title="SOMETHING"
+        location="SOMEWHERE"
+        points="100"
+        date="November 2, 2019" />
+
+      <DonationCard
         title="SOMETHING"
         location="SOMEWHERE"
         points="100" />
