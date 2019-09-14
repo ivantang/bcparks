@@ -6,6 +6,7 @@ import { PersonIcon } from './PersonIcon';
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    margin: 5,
   },
   personIconStyle: {
     flexDirection: 'row'
@@ -33,8 +34,8 @@ const peopleIconBarObjects = numberOfBlack => {
   return arr;
 }
 
-export function PeopleProgressBar(props) {
-  var { percentage } = props;
+export default function PeopleProgressBar(props) {
+  const { percentage } = props;
 
   return (
     <View style={styles.container}>
