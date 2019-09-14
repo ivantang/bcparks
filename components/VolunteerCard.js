@@ -12,7 +12,7 @@ export function VolunteerCard(props) {
         date={props.date} />
 
       <View style={CardStyles.container}>
-        <Text>{props.points}</Text>
+        <Text>{props.points} pts.</Text>
         <Text style={CardStyles.action}>VOLUNTEER</Text>
       </View>
     </View>
