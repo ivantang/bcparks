@@ -13,7 +13,9 @@ export function DonationCard(props) {
 
       <View style={CardStyles.container}>
         <Text>{props.points} pts.</Text>
-        <ProgressBar progress={0.5} color={Colors.black} />
+        <ProgressBar
+          progress={0.5}
+          color={Colors.black} />
         <Text style={CardStyles.action}>DONATE</Text>
       </View>
     </View>
