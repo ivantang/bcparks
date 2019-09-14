@@ -9,9 +9,9 @@ export function VolunteerCard(props) {
         title={props.title}
         location={props.location} />
 
-      <View>
+      <View style={styles.container}>
         <Text>{props.points}</Text>
-        <Text>VOLUNTEER</Text>
+        <Text style={styles.volunteerText}>VOLUNTEER</Text>
       </View>
     </View>
   );
@@ -19,7 +19,11 @@ export function VolunteerCard(props) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: 'black',
+    padding: 10,
   },
+  volunteerText: {
+    textAlign: 'center',
+  }
 });

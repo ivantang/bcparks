@@ -4,15 +4,15 @@ import { Text, View, StyleSheet } from 'react-native';
 export function CardTitle(props) {
   return (
     <View>
-      <Text style="title">{props.title}</Text>
-      <Text style="location">{props.location}</Text>
+      <Text style={styles.location}>{props.location}</Text>
+      <Text style={styles.title}>{props.title}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
+  location: {
+  },
+  title: {
   },
 });
