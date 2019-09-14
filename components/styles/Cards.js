@@ -13,4 +13,8 @@ export default cardstyles = StyleSheet.create({
     borderColor: 'black',
     padding: 10,
   },
+  progressbar: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
 });
