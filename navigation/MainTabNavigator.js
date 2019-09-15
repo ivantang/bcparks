@@ -4,7 +4,11 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+
+import LoginScreen from '../screens/LoginScreen';
+import VolunteerScreen from '../screens/VolunteerScreen';
+import DonationScreen from '../screens/DonationScreen';
+
 import SettingsScreen from '../screens/SettingsScreen';
 
 const config = Platform.select({
@@ -16,7 +20,7 @@ const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
   },
-  config
+  config,
 );
 
 HomeStack.navigationOptions = {
@@ -35,27 +39,59 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
-const LinksStack = createStackNavigator(
+const LoginStack = createStackNavigator(
   {
-    Links: LinksScreen,
+    Login: LoginScreen,
   },
   config
 );
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+LoginStack.navigationOptions = {
+  tabBarLabel: 'Login',
+  tabBarIcon: ({ focused }) => {
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+  }
+}
+
+LoginStack.path = '';
+
+const VolunteerStack = createStackNavigator(
+  {
+    Volunteer: VolunteerScreen,
+  },
+  config,
+);
+
+VolunteerStack.navigationOptions = {
+  tabBarLabel: 'Volunteer',
+  tabBarIcon: ({ focused }) => {
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />;
+  },
+};
+
+VolunteerStack.path = '';
+
+const DonationStack = createStackNavigator(
+  {
+    Donation: DonationScreen,
+  },
+  config,
+);
+
+DonationStack.navigationOptions = {
+  tabBarLabel: 'Donate',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
   ),
 };
 
-LinksStack.path = '';
+DonationStack.path = '';
 
 const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
   },
-  config
+  config,
 );
 
 SettingsStack.navigationOptions = {
@@ -69,7 +105,9 @@ SettingsStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  LoginStack,
+  VolunteerStack,
+  DonationStack,
   SettingsStack,
 });
 
