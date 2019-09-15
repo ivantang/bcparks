@@ -2,7 +2,9 @@ import React from 'react';
 import {
   StyleSheet,
   View,
+  ScrollView,
 } from 'react-native';
+import { LoginHeader } from "../components/Header";
 import { LoginTextInput } from "../components/LoginTextInput";
 import { LoginButton } from "../components/LoginButton";
 

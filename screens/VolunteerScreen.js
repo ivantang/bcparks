@@ -1,6 +1,11 @@
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import { View, FlatList, StyleSheet, } from 'react-native';
+import {
+  View,
+  FlatList,
+  StyleSheet,
+  ScrollView
+} from 'react-native';
 
 import { MonoText } from '../components/StyledText';
 import { VolunteerCard } from '../components/VolunteerCard';
@@ -178,15 +183,11 @@ const PROJECTS = [
 
 export default function VolunteerScreen(props) {
   return (
-    <View>
-      <Header
-        children={true}
-        regularText={"Projects to "}
-        boldText={"Volunteer"}/>
-
+    <ScrollView>
+      <Header backgroundColor="#A35EC4" regularText="Projects to " boldText="Volunteer" />
       <FlatList
         data={PROJECTS}
-        renderItem={({ item }) => (
+        renderItem={({ item }) =>
           <VolunteerCard
             title={item.title}
             location={item.location}
@@ -194,12 +195,10 @@ export default function VolunteerScreen(props) {
             volunteersFound={item.volunteersFound}
             volunteersNeeded={item.volunteersNeeded}
             points={item.points}
-            navigation={props.navigation}
-          />
-        )}
-        keyExtractor={item => item.id}
-      />
-    </View>
+            navigation={props.navigation} />
+          }
+          keyExtractor={item => item.id} />
+    </ScrollView>
   );
 }
 
