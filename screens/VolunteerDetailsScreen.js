@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
+
+import createdBy from '../assets/images/createdBy.png';
 
 import CardStyles from '../components/styles/Cards';
 import DetailStyles from '../components/styles/Details'
@@ -46,6 +48,10 @@ export default function VolunteerDetailsScreen(props) {
             action="Volunteer"
             color="#A35EC4"
             textColor="#FFFFFF"/>
+
+            <Image
+              source={createdBy}
+              style={CardStyles.createdby} />
       </View>
     </View>
   );
