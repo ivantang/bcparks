@@ -20,39 +20,44 @@ export default function FormScreen() {
 
     return (
         <KeyboardAwareScrollView>
-                <Text style={{margin: 25}}/>
-                <Text style={{marginHorizontal: 10, marginBottom: 6, color: "#ACACAC"}}>LOCATION</Text>
+                <Text style={{color: '#6F6F6F', margin: 15, fontSize: 25}}>Report an <Text style={{fontSize: 25, fontWeight: "bold"}}>Issue</Text></Text>
+                <Text style={{marginHorizontal: 15, marginBottom: 6, color: "#ACACAC"}}>LOCATION</Text>
                 <TextInput
-                    style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginHorizontal: 10, fontSize: 20}}
+                    style={{ color: "#707070", padding: 8, borderColor: '#F8F8F8', borderRadius: 10, backgroundColor:'#F8F8F8', height: 40, borderWidth: 1, marginHorizontal: 15, fontSize: 20}}
                     onChangePark={text => onChangePark(text)}
                     parkValue={parkValue}
+                    placeholder={"Enter Park Location"}
                 />
                 <Text style={{margin: 15}}/>
-                <Text style={{marginHorizontal: 10, marginBottom: 6, color: "#ACACAC"}}>ISSUE</Text>
+                <Text style={{marginHorizontal: 15, marginBottom: 6, color: "#ACACAC"}}>ISSUE</Text>
                 <TextInput
                     multiline
                     numberOfLines={4}
                     blurOnSubmit={true}
-                    style={{ height: 100, borderColor: 'gray', borderWidth: 1, marginHorizontal: 10, fontSize: 20 }}
+                    style={{ color: "#707070",paddingLeft: 8,height: 100, borderColor: '#F8F8F8', backgroundColor:'#F8F8F8', borderRadius: 10, borderWidth: 1, marginHorizontal: 15, fontSize: 20 }}
                     onChangeDesc={text => onChangeDesc(text)}
                     descValue={descValue}
+                    placeholder={"Briefly Describe The Issue"}
                 />
+                <View style={{margin: 10}}/>
                 <Dropdown
                     fontSize={20}
-                    containerStyle={{marginHorizontal:10}}
+                    containerStyle={{marginHorizontal:15}}
                     label='URGENCY'
                     labelFontSize={14}
                     data={urgency}
+                    placeholder={"Urgency Level"}
                 />
-                <Text style={{margin: 15}}/>
-
-                <Text style={{marginHorizontal: 10, marginBottom: 6, color: "#ACACAC"}}>NUMBER OF VOLUNTEERS</Text>
+                <View style={{margin: 10}}/>
+                <Text style={{marginHorizontal: 15, marginBottom: 6, color: "#ACACAC"}}>NUMBER OF VOLUNTEERS</Text>
                 <TextInput
-                    style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginHorizontal: 10, fontSize: 20 }}
+                    style={{ color: "#707070",paddingLeft: 8,borderColor: '#F8F8F8', backgroundColor:'#F8F8F8', borderRadius: 10, height: 40, borderWidth: 1, marginHorizontal: 15, fontSize: 20 }}
                     onChangeVolunteers={text => onChangeVolunteers(text)}
                     volunteerValue={volunteerValue}
+                    placeholder={"Volunteers Needed"}
                 />
                 <View style={{flex:1}} />
+
         </KeyboardAwareScrollView>
 
     );
