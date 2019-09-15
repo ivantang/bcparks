@@ -1,4 +1,6 @@
-import {ScrollView, TextInput, View, KeyboardAvoidingView, Text} from "react-native";
+import { TextInput, View, Text, Platform, Button, Keyboard} from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+
 import React, { Component } from 'react';
 
 export default function FormScreen() {
@@ -7,12 +9,11 @@ export default function FormScreen() {
     const [volunteerValue, onChangeVolunteers] = React.useState('');
 
     return (
-        <KeyboardAvoidingView
-            behavior="padding">
+        <KeyboardAwareScrollView>
                 <Text style={{margin: 25}}/>
                 <Text style={{marginHorizontal: 10, marginBottom: 6, color: "#ACACAC"}}>LOCATION</Text>
                 <TextInput
-                    style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginHorizontal: 10 }}
+                    style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginHorizontal: 10, fontSize: 20}}
                     onChangePark={text => onChangePark(text)}
                     parkValue={parkValue}
                 />
@@ -21,19 +22,20 @@ export default function FormScreen() {
                 <TextInput
                     multiline
                     numberOfLines={4}
-                    style={{ height: 100, borderColor: 'gray', borderWidth: 1, marginHorizontal: 10 }}
+                    blurOnSubmit={true}
+                    style={{ height: 100, borderColor: 'gray', borderWidth: 1, marginHorizontal: 10, fontSize: 20 }}
                     onChangeDesc={text => onChangeDesc(text)}
                     descValue={descValue}
                 />
                 <Text style={{margin: 15}}/>
                 <Text style={{marginHorizontal: 10, marginBottom: 6, color: "#ACACAC"}}>NUMBER OF VOLUNTEERS</Text>
                 <TextInput
-                    style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginHorizontal: 10 }}
+                    style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginHorizontal: 10, fontSize: 20 }}
                     onChangeVolunteers={text => onChangeVolunteers(text)}
                     volunteerValue={volunteerValue}
                 />
-            <View style={{ height: 60 }} />
-        </KeyboardAvoidingView>
+                <View style={{flex:1}} />
+        </KeyboardAwareScrollView>
 
     );
 }
