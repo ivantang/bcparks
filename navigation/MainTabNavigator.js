@@ -7,6 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 import VolunteerScreen from '../screens/VolunteerListScreen';
 import DonationsScreen from '../screens/DonationsListScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import FormScreen from '../screens/FormScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },

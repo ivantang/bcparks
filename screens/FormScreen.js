@@ -1,25 +1,20 @@
 import Form from 'react-native-form';
-import {ScrollView, TextInput, View, Switch, Slider, DatePickerIOS, Picker, PickerIOS} from "react-native";
+import {ScrollView, TextInput, View, Switch, Slider, DatePickerIOS, Picker, PickerIOS, StyleSheet} from "react-native";
 import React from "react";
 
 export default function FormScreen() {
     return (
-        <ScrollView style={styles.container}>
-            <Form ref="form">
+        <Form ref="form">
+            <View>
                 <View>
-                    <View>
-                        <TextInput type="TextInput" name="myTextInput" /> // Yes, it doesn't matter how deep they are :)
-                    </View>
+                    <TextInput type="TextInput" name="myTextInput" /> // Yes, it doesn't matter how deep they are :)
                 </View>
-
-                <Switch type="Switch" name="mySwitch" />
-                <Slider type="Slider" name="mySlider" />
-                <DatePickerIOS type="DatePickerIOS" name="myBirthday" />
-                <Picker type="Picker" name="myPicker" />
-
-                <PickerIOS type="PickerIOS" name="pickers[ios]" /> // Yes, we support form serialization, like the web
-            </Form>
-        </ScrollView>
+            </View>
+            <Switch type="Switch" name="mySwitch" />
+            <Slider type="Slider" name="mySlider" />
+            <DatePickerIOS type="DatePickerIOS" name="myBirthday" />
+            <Picker type="Picker" name="myPicker" />
+            <PickerIOS type="PickerIOS" name="pickers[ios]" /> // Yes, we support form serialization, like the web
+        </Form>
     );
-
 }
