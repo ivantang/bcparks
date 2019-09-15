@@ -5,10 +5,14 @@ import {
     Text,
     Image,
   } from 'react-native';
+import { width, height } from '../constants/Layout';
 
 import logo from '../assets/images/LOGO.png';
 import username from '../assets/images/Username.png';
 import leaderboard from '../assets/images/Leaderboard.png';
+import back from '../assets/images/Back.png';
+import search from '../assets/images/Search.png';
+import userscore from '../assets/images/UserScore.png';
 
 
 export function TestHeader() {
@@ -70,7 +74,15 @@ export function WelcomeDashboard() {
 // TODO
 export function ListDashboard() {
     //https://xd.adobe.com/spec/ae44f48a-4c0e-4219-439f-32cd25280a78-d875/screen/9695284f-6aa6-4061-a792-33d93724d67b/Help-Out-Volunteer-Positions
-    return <Image style={styles.loginImage} source={logo} />
+    return (
+      <View>
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+          <Image style={styles.back} source={back} />
+          <Image style={styles.userscore} source={userscore} />
+        </View>
+        <Image style={styles.search} source={search} />
+      </View>
+    );
 }
 
 // TODO
@@ -175,5 +187,19 @@ const styles = StyleSheet.create({
         color: '#6F6F6F',
         fontSize: 29,
         fontFamily: 'roboto-bold',
+    },
+    listdashboard: {
+      width: width,
+    },
+    userscore: {
+      marginLeft: 180,
+    },
+    back: {
+      marginTop: 10,
+      marginLeft: 10,
+    },
+    search: {
+      marginTop: 10,
+      marginLeft: 70,
     }
   });
