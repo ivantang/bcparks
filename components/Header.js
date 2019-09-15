@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         flex: 1,
         top: -60,
         backgroundColor: 'white',
-        borderTopLeftRadius: 60, 
+        borderTopLeftRadius: 60,
         borderTopRightRadius: 60,
     },
     title: {
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         // fontFamily: 'roboto',
         // fontSize: 50,
         // fontSize: 29,
-        
+
     },
     regular: {
         color: '#6F6F6F',
