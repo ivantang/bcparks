@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function ActionButton(props) {
   return (
+<<<<<<< HEAD
     <TouchableOpacity
       onPress={() => {
         props.navigation.navigate('VolunteerDetails', props);
@@ -16,6 +17,12 @@ export default function ActionButton(props) {
         </View>
         <View style={styles.spacer} />
       </View>
+=======
+    <TouchableOpacity onPress={() => {
+      props.navigation.navigate(props.navigation.getParam("navigateTo", "LoginScreen"), props);
+    }} style={[styles.button, {backgroundColor: props.color}]}>
+        <Text style={[styles.buttonText, {color: props.textColor}]}>{props.action}</Text>
+>>>>>>> master
     </TouchableOpacity>
   );
 }
@@ -24,21 +31,11 @@ const styles = StyleSheet.create({
   button: {
     borderRadius: 10,
     paddingVertical: 35,
-    marginHorizontal: 35,
+    marginVertical: 20,
   },
   buttonText: {
     fontFamily: 'roboto-bold',
-    color: 'white',
     textAlign: 'center',
     fontSize: 20,
-  },
-  points: {
-    flex: 1,
-  },
-  textView: {
-    flex: 1,
-  },
-  spacer: {
-    flex: 1,
-  },
+  }
 });

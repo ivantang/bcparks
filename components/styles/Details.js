@@ -3,6 +3,20 @@ import { width, height } from '../../constants/Layout';
 
 export default detailstyles = StyleSheet.create({
   container: {
-    paddingHorizontal: 35,
+    paddingHorizontal: 65,
+    marginTop: 20,
   },
+  headers: {
+    color: '#ACACAC',
+    fontFamily: 'roboto-regular',
+    fontSize: 14,
+  },
+  content: {
+    color: '#434343',
+    fontFamily: 'roboto-regular',
+    lineHeight: 30,
+  },
+  section: {
+    paddingVertical: 10,
+  }
 });
