@@ -4,7 +4,6 @@ import { width, height } from '../../constants/Layout';
 export default titlestyles = StyleSheet.create({
   info: {
     flexDirection: 'column',
-    paddingLeft: 20,
   },
   location: {
     flexDirection: 'row',
