@@ -8,6 +8,8 @@ function calculatePercentage(funded, needed) {
   return funded && needed ? funded/needed : 0;
 }
 
+const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>
+
 export function DonationCard(props) {
   return (
     <View style={CardStyles.card}>
@@ -16,11 +18,11 @@ export function DonationCard(props) {
         location={props.location} />
 
       <View style={CardStyles.container}>
-        <Text>{props.points} pts.</Text>
         <ProgressBar
           progress={calculatePercentage(props.cashFunded, props.cashNeeded)}
           color={Colors.black} />
-        <Text style={CardStyles.action}>DONATE</Text>
+        <Text style={CardStyles.progress}><B>${props.cashFunded}</B> / ${props.cashNeeded} </Text>
+        <Text style={CardStyles.funded}>{Number(calculatePercentage(props.cashFunded, props.cashNeeded) * 100).toFixed(0)}% Funded</Text>
       </View>
     </View>
   );

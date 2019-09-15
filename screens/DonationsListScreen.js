@@ -20,7 +20,7 @@ const PROJECTS = [
     location:"STANLEY PERKS",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4,000,000"
+    points: "700"
   },
   {
     id: "2",
@@ -28,7 +28,7 @@ const PROJECTS = [
     location: "QE PARK",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4",
+    points: "250",
   },
   {
     id: "3",
@@ -36,7 +36,7 @@ const PROJECTS = [
     location: "MY BACKYARD",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "999,999,999",
+    points: "900",
   },
   {
     id: "4",
@@ -44,7 +44,7 @@ const PROJECTS = [
     location: "STANLEY PERKS",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4,000,000"
+    points: "700"
   },
   {
     id: "5",
@@ -52,7 +52,7 @@ const PROJECTS = [
     location: "QE PARK",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4",
+    points: "250",
   },
   {
     id: "6",
@@ -60,7 +60,7 @@ const PROJECTS = [
     location: "MY BACKYARD",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "999,999,999",
+    points: "900",
   },
   {
     id: "7",
@@ -68,7 +68,7 @@ const PROJECTS = [
     location: "STANLEY PERKS",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4,000,000"
+    points: "700"
   },
   {
     id: "8",
@@ -76,7 +76,7 @@ const PROJECTS = [
     location: "QE PARK",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4",
+    points: "250",
   },
   {
     id: "9",
@@ -84,7 +84,7 @@ const PROJECTS = [
     location: "MY BACKYARD",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "999,999,999",
+    points: "900",
   },
   {
     id: "10",
@@ -92,7 +92,7 @@ const PROJECTS = [
     location: "STANLEY PERKS",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4,000,000"
+    points: "700"
   },
   {
     id: "11",
@@ -100,7 +100,7 @@ const PROJECTS = [
     location: "QE PARK",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4",
+    points: "250",
   },
   {
     id: "12",
@@ -108,7 +108,7 @@ const PROJECTS = [
     location: "MY BACKYARD",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "999,999,999",
+    points: "900",
   },
   {
     id: "13",
@@ -116,7 +116,7 @@ const PROJECTS = [
     location: "STANLEY PERKS",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4,000,000"
+    points: "700"
   },
   {
     id: "14",
@@ -124,7 +124,7 @@ const PROJECTS = [
     location: "QE PARK",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4",
+    points: "250",
   },
   {
     id: "15",
@@ -132,7 +132,7 @@ const PROJECTS = [
     location: "MY BACKYARD",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "999,999,999",
+    points: "900",
   },
   {
     id: "16",
@@ -140,7 +140,7 @@ const PROJECTS = [
     location: "STANLEY PERKS",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4,000,000"
+    points: "700"
   },
   {
     id: "17",
@@ -148,7 +148,7 @@ const PROJECTS = [
     location: "QE PARK",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "4",
+    points: "250",
   },
   {
     id: "18",
@@ -156,7 +156,7 @@ const PROJECTS = [
     location: "MY BACKYARD",
     cashFunded:cashFunded,
     cashNeeded:cashNeeded,
-    points: "999,999,999",
+    points: "900",
   }
 ]
 
