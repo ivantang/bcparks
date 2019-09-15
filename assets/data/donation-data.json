@@ -1,21 +1,4 @@
-import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
-import {
-  FlatList,
-  StyleSheet,
-  ScrollView,
-} from 'react-native';
-
-import { MonoText } from '../components/StyledText';
-import { DonationCard } from '../components/DonationCard';
-import { Header } from '../components/Header';
-
-import ScreenLayout from '../constants/Layout';
-
-const cashFunded = 100;
-const cashNeeded = 300;
-
-const PROJECTS = [
+[
   {
     id: "1",
     title:"PROJECT TITLE ONE",
@@ -161,26 +144,3 @@ const PROJECTS = [
     points: "900",
   }
 ]
-
-export default function DonationsScreen(props) {
-  return (
-    <ScrollView>
-      <Header backgroundColor="#66B13A" regularText="Projects to " boldText="Donate" />
-      <FlatList
-        data={PROJECTS}
-        renderItem={({ item }) =>
-          <DonationCard
-            title={item.title}
-            location={item.location}
-            points={item.points}
-            cashFunded={item.cashFunded}
-            cashNeeded={item.cashNeeded}
-            navigation={props.navigation} />}
-          keyExtractor={item => item.id} />
-    </ScrollView>
-  );
-}
-
-DonationsScreen.navigationOptions = {
-  header: null,
-};
