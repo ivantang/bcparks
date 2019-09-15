@@ -51,7 +51,9 @@ export default function DonationDetailsScreen(props) {
           <ActionButton
             action="Donate"
             color="#66B13A"
-            textColor="#FFFFFF"/>
+            textColor="#FFFFFF"
+            navigateTo="DonationComplete"
+            navigation={props.navigation}/>
 
           <Image
             source={createdBy}

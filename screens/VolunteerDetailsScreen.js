@@ -48,7 +48,9 @@ export default function VolunteerDetailsScreen(props) {
           <ActionButton
             action="Volunteer"
             color="#A35EC4"
-            textColor="#FFFFFF"/>
+            textColor="#FFFFFF"
+            navigateTo="VolunteerComplete"
+            navigation={props.navigation}/>
 
             <Image
               source={createdBy}
