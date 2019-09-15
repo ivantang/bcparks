@@ -12,7 +12,7 @@ import leaderboard from '../assets/images/Leaderboard.png';
 
 
 export function TestHeader() {
-    return LandingHeader();
+    return VolunteerHeader();
 }
 
 export function LoginHeader() {
@@ -32,7 +32,7 @@ export function VolunteerHeader() {
 }
 
 export function VolunteerDetailHeader() {
-    return <Header backgroundColor="#A35EC4" dashboard={<DetailDashboard />}  /> /* volunteerDetail */
+    return <Header backgroundColor="#A35EC4" dashboard={<GenericDashboard />}  /> /* volunteerDetail */
 }
 
 export function LeaderBoardHeader() {
@@ -44,16 +44,12 @@ export function DonateHeader() {
 }
 
 export function DonateDetailHeader() {
-    return <Header backgroundColor="#66B13A" dashboard={<DetailDashboard />}  /> /* donateDetail */
+    return <Header backgroundColor="#66B13A" dashboard={<GenericDashboard />}  /> /* donateDetail */
 }
 
 export function IssueHeader() {
 return <Header backgroundColor="#DAD85D" dashboard={<IssueDashboard />} regularText="Report an " boldText="Issue"  /> /* issue */
 }
-
-
-
-
 
 export function LoginDashboard() {
     return <Image style={styles.loginImage} source={logo} />
@@ -78,7 +74,7 @@ export function ListDashboard() {
 }
 
 // TODO
-export function DetailDashBoard() {
+export function GenericDashboard() {
     //https://xd.adobe.com/spec/ae44f48a-4c0e-4219-439f-32cd25280a78-d875/screen/ed2f46f7-8981-475d-ab47-77b2c579d661/Help-Out-Project-Volunteer
     return <Image style={styles.loginImage} source={logo} />
 }
