@@ -16,7 +16,7 @@ import userscore from '../assets/images/UserScore.png';
 
 
 export function TestHeader() {
-    return VolunteerHeader();
+    return VolunteerDetailHeader();
 }
 
 export function LoginHeader() {
@@ -88,7 +88,12 @@ export function ListDashboard() {
 // TODO
 export function GenericDashboard() {
     //https://xd.adobe.com/spec/ae44f48a-4c0e-4219-439f-32cd25280a78-d875/screen/ed2f46f7-8981-475d-ab47-77b2c579d661/Help-Out-Project-Volunteer
-    return <Image style={styles.loginImage} source={logo} />
+    return (
+        <View style={{flexDirection: 'row', marginTop: 10}}>
+          <Image style={styles.back} source={back} />
+          <Image style={styles.userscore} source={userscore} />
+        </View>
+    )
 }
 
 // TODO
