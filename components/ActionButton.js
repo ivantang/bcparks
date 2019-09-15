@@ -3,16 +3,18 @@ import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function ActionButton(props) {
   return (
-    <TouchableOpacity onPress={() => {
-      props.navigation.navigate('VolunteerDetails', props);
-    }} style={[styles.button, {backgroundColor: props.color}]}>
-      <View style={{flexDirection: 'column'}}>
-        <View style={styles.points}>
-        </View>
+    <TouchableOpacity
+      onPress={() => {
+        props.navigation.navigate('VolunteerDetails', props);
+      }}
+      style={[styles.button, { backgroundColor: props.color, },]}
+    >
+      <View style={{ flexDirection: 'column', }}>
+        <View style={styles.points} />
         <View style={styles.textView}>
           <Text style={styles.buttonText}>{props.action}</Text>
         </View>
-        <View style={styles.spacer}></View>
+        <View style={styles.spacer} />
       </View>
     </TouchableOpacity>
   );

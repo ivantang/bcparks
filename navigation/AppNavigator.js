@@ -9,6 +9,8 @@ import VolunteerScreen from '../screens/VolunteerScreen';
 import DonationScreen from '../screens/DonationScreen';
 import VolunteerDetailsScreen from '../screens/VolunteerDetailsScreen';
 import DonationDetailsScreen from '../screens/DonationDetailsScreen';
+import DonationComplete from '../screens/DonationComplete';
+import VolunteerComplete from '../screens/VolunteerComplete';
 
 export default createAppContainer(
   createSwitchNavigator(
@@ -20,10 +22,12 @@ export default createAppContainer(
       VolunteerList: VolunteerScreen,
       DonationList: DonationScreen,
       VolunteerDetails: VolunteerDetailsScreen,
-      DonateDetails: DonationDetailsScreen,
+      DonationDetails: DonationDetailsScreen,
+      DonationComplete,
+      VolunteerComplete,
     },
     {
-      initialRouteName: 'Login',
+      initialRouteName: 'VolunteerComplete',
     },
   ),
 );
