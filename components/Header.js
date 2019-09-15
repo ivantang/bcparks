@@ -6,12 +6,10 @@ import {
   } from 'react-native';
 
 export function Header(props) {
-    const { regularText, boldText, children } = props;
+    const { regularText, boldText } = props;
     return (
         <View style={styles.container}>
-            <View style={styles.dash}>
-                { children }
-            </View>
+            <View style={styles.dash} />
             <View style={styles.tab}>
                 <View style={styles.title}>
                     <Text style={styles.regular}>{regularText}</Text>
