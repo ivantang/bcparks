@@ -46,8 +46,7 @@ export default function VolunteerDetailsScreen(props) {
           <B>{vFound}</B> /{vNeeded} Volunteers
         </Text>
 
-        <ActionButton action="Volunteer" color="#A45EC5" textColor="#FFFFFF"
-        />
+        <ActionButton action="Volunteer" color="#A35EC4" textColor="#FFFFFF" />
       </View>
     </View>
   );

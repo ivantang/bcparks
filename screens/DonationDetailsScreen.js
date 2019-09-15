@@ -17,7 +17,7 @@ export default function DonationDetailsScreen(props) {
 
   return (
     <View>
-      <Header backgroundColor="#A35EC4" />
+      <Header backgroundColor="#66B13A" />
 
       <View style={DetailStyles.container}>
         <CardTitle
@@ -41,7 +41,7 @@ export default function DonationDetailsScreen(props) {
 
           <ActionButton
             action="Donate"
-            color="#A45EC5"
+            color="#66B13A"
             textColor="#FFFFFF"/>
       </View>
     </View>
