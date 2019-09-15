@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
+
+import createdBy from '../assets/images/createdBy.png';
 
 import CardStyles from '../components/styles/Cards';
 import DetailStyles from '../components/styles/Details';
@@ -23,30 +25,34 @@ export default function VolunteerDetailsScreen(props) {
         <CardTitle
           title={props.navigation.getParam('title', 'REFRESH PAGE')}
           location={props.navigation.getParam('location', 'ERROR')}
-          points={props.navigation.getParam('points', '0')}
-        />
 
-        <View style={DetailStyles.section}>
-          <Text style={DetailStyles.headers}>DATE</Text>
-          <Text style={DetailStyles.content}>{props.navigation.getParam('date', 'Unknown')}</Text>
-        </View>
+          points={props.navigation.getParam('points', '0')} />
 
-        <View style={DetailStyles.section}>
-          <Text style={DetailStyles.headers}>DESCRIPTION</Text>
-          <Text style={DetailStyles.content}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales est nibh, ac
-            tristique nulla eleifend vitae. Aliquam arcu quam, pharetra ac ipsum non, rutrum.
-          </Text>
-        </View>
+          <View style={DetailStyles.section}>
+            <Text style={DetailStyles.headers}>DATE</Text>
+            <Text style={DetailStyles.content}>{props.navigation.getParam('date', 'Unknown')}</Text>
+          </View>
 
-        <View style={CardStyles.progressbar}>
-          <PeopleProgressBar percentage={(vFound / vNeeded) * 100} size="large"/>
-        </View>
-        <Text style={CardStyles.progress}>
-          <B>{vFound}</B> /{vNeeded} Volunteers
-        </Text>
+          <View style={DetailStyles.section}>
+            <Text style={DetailStyles.headers}>DESCRIPTION</Text>
+            <Text style={DetailStyles.content}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales est nibh, ac tristique nulla eleifend vitae. Aliquam arcu quam, pharetra ac ipsum non, rutrum.</Text>
+          </View>
 
-        <ActionButton action="Volunteer" color="#A35EC4" textColor="#FFFFFF" />
+          <View style={CardStyles.progressbar}>
+            <PeopleProgressBar
+              percentage={vFound/vNeeded * 100}
+              size="large"/>
+          </View>
+          <Text style={CardStyles.progress}><B>{vFound}</B> / {vNeeded} Volunteers</Text>
+
+          <ActionButton
+            action="Volunteer"
+            color="#A35EC4"
+            textColor="#FFFFFF"/>
+
+            <Image
+              source={createdBy}
+              style={CardStyles.createdby} />
       </View>
     </View>
   );

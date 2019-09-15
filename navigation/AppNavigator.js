@@ -19,6 +19,7 @@ export default createAppContainer(
       // Read more at https://reactnavigation.org/docs/en/auth-flow.html
       Login: LoginScreen,
       Home: HomeScreen,
+      Landing: LandingScreen,
       VolunteerList: VolunteerScreen,
       DonationList: DonationScreen,
       VolunteerDetails: VolunteerDetailsScreen,

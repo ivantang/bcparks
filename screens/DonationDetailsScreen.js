@@ -1,5 +1,7 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
+
+import createdBy from '../assets/images/createdBy.png';
 
 import CardStyles from '../components/styles/Cards';
 import DetailStyles from '../components/styles/Details'
@@ -8,6 +10,11 @@ import { CardTitle } from '../components/CardTitle';
 import PeopleProgressBar from '../components/PeopleProgressBar';
 import ActionButton from '../components/ActionButton';
 import { Header } from '../components/Header';
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
+
+function calculatePercentage(found, needed) {
+  return found && needed ? found/needed * 100 : "0";
+}
 
 const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>
 
@@ -23,12 +30,7 @@ export default function DonationDetailsScreen(props) {
         <CardTitle
           title={props.navigation.getParam('title', 'REFRESH PAGE')}
           location={props.navigation.getParam('location', 'ERROR')}
-          points={props.navigation.getParam('points', '0')} />
-
-          <View style={DetailStyles.section}>
-            <Text style={DetailStyles.headers}>DATE</Text>
-            <Text style={DetailStyles.content}>{props.navigation.getParam('date', 'Unknown')}</Text>
-          </View>
+          points={props.navigation.getParam('points', undefined)} />
 
           <View style={DetailStyles.section}>
             <Text style={DetailStyles.headers}>DESCRIPTION</Text>
@@ -36,13 +38,24 @@ export default function DonationDetailsScreen(props) {
           </View>
 
           <View style={CardStyles.progressbar}>
+            <AnimatedCircularProgress
+              size={120}
+              width={15}
+              fill={calculatePercentage(vFound,vNeeded)}
+              tintColor="#66B13A"
+              onAnimationComplete={() => console.log('onAnimationComplete')}
+              backgroundColor="#F8F8F8" />
           </View>
-          <Text style={CardStyles.progress}><B>{vFound}</B> / {vNeeded} Volunteers</Text>
+          <Text style={CardStyles.progress}><B>${vFound}</B> / ${vNeeded} Funded</Text>
 
           <ActionButton
             action="Donate"
             color="#66B13A"
             textColor="#FFFFFF"/>
+
+          <Image
+            source={createdBy}
+            style={CardStyles.createdby} />
       </View>
     </View>
   );
