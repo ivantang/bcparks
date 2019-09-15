@@ -2,11 +2,13 @@ import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import {
   FlatList,
-  StyleSheet
+  StyleSheet,
+  ScrollView,
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
 import { DonationCard } from '../components/DonationCard';
+import { Header } from '../components/Header';
 
 import ScreenLayout from '../constants/Layout';
 
@@ -162,18 +164,20 @@ const PROJECTS = [
 
 export default function DonationsScreen(props) {
   return (
-    <FlatList
-      data={PROJECTS}
-      renderItem={({ item }) =>
-        <DonationCard
-          id={item.id}
-          title={item.title}
-          location={item.location}
-          points={item.points}
-          cashFunded={item.cashFunded}
-          cashNeeded={item.cashNeeded}
-          navigation={props.navigation} />}
-        keyExtractor={item => item.id} />
+    <ScrollView>
+      <Header backgroundColor="#66B13A" regularText="Projects to " boldText="Donate" />
+      <FlatList
+        data={PROJECTS}
+        renderItem={({ item }) =>
+          <DonationCard
+            title={item.title}
+            location={item.location}
+            points={item.points}
+            cashFunded={item.cashFunded}
+            cashNeeded={item.cashNeeded}
+            navigation={props.navigation} />}
+          keyExtractor={item => item.id} />
+    </ScrollView>
   );
 }
 
