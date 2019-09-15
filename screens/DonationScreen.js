@@ -166,6 +166,7 @@ export default function DonationsScreen() {
       data={PROJECTS}
       renderItem={({ item }) =>
         <DonationCard
+          id={item.id}
           title={item.title}
           location={item.location}
           points={item.points}
