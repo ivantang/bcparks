@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         flex: 1,
         top: -60,
         backgroundColor: 'white',
-        borderTopLeftRadius: 60, 
+        borderTopLeftRadius: 60,
         borderTopRightRadius: 60,
     },
     image:{
