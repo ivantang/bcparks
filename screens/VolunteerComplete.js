@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
   },
   pointsEarnedText: {
-    marginTop: 100,
+    marginTop: 180,
     color: 'white',
     fontFamily: 'roboto-regular',
     fontSize: 25,
@@ -41,6 +41,10 @@ const styles = StyleSheet.create({
     fontFamily: 'roboto-regular',
     fontSize: 25,
   },
+  actionButtonStyle: {
+    width: 300,
+    marginTop: 50,
+  },
 });
 
 export default function VolunteerComplete({ navigation }) {
@@ -53,7 +57,9 @@ export default function VolunteerComplete({ navigation }) {
         <Text style={styles.pointsEarnedAmount}>{navigation.getParam('points', 0)}</Text>
         <Image source={whitetreeIcon} style={styles.tree}/>
       </View>
-      <ActionButton action="Back To Home" />
+      <View style={styles.actionButtonStyle}>
+        <ActionButton action="Back To Home" textColor="#A35EC4" color="white" />
+      </View>
     </View>
   );
 }

@@ -16,70 +16,39 @@ export default function VolunteerDetailsScreen(props) {
   const vNeeded = props.navigation.getParam('volunteersNeeded', 1);
 
   return (
-<<<<<<< HEAD
-    <View style={DetailStyles.container}>
-      <ProjectTitle
-        title={props.navigation.getParam('title', 'REFRESH PAGE')}
-        location={props.navigation.getParam('location', 'ERROR')}
-      />
-
-      <View>
-        <Text>DATE</Text>
-        <Text>{props.navigation.getParam('date', 'Unknown')}</Text>
-
-        <Text>DESCRIPTION</Text>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales est nibh, ac tristique
-          nulla eleifend vitae. Aliquam arcu quam, pharetra ac ipsum non, rutrum.
-        </Text>
-      </View>
-
-      <View style={CardStyles.progressbar}>
-        <PeopleProgressBar percentage={(vFound / vNeeded) * 100} size="large" />
-      </View>
-      <Text style={CardStyles.progress}>
-        <B>{vFound}</B>
-{' '}
-/{vNeeded}
-{' '}
-Volunteers
-</Text>
-
-      <ActionButton action="Volunteer" color="#A45EC5"
-      />
-=======
     <View>
-      <Header backgroundColor="#A35EC4" />
+      <Header backgroundColor="#A35EC4"/>
 
       <View style={DetailStyles.container}>
         <CardTitle
           title={props.navigation.getParam('title', 'REFRESH PAGE')}
           location={props.navigation.getParam('location', 'ERROR')}
-          points={props.navigation.getParam('points', '0')} />
+          points={props.navigation.getParam('points', '0')}
+        />
 
-          <View style={DetailStyles.section}>
-            <Text style={DetailStyles.headers}>DATE</Text>
-            <Text style={DetailStyles.content}>{props.navigation.getParam('date', 'Unknown')}</Text>
-          </View>
+        <View style={DetailStyles.section}>
+          <Text style={DetailStyles.headers}>DATE</Text>
+          <Text style={DetailStyles.content}>{props.navigation.getParam('date', 'Unknown')}</Text>
+        </View>
 
-          <View style={DetailStyles.section}>
-            <Text style={DetailStyles.headers}>DESCRIPTION</Text>
-            <Text style={DetailStyles.content}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales est nibh, ac tristique nulla eleifend vitae. Aliquam arcu quam, pharetra ac ipsum non, rutrum.</Text>
-          </View>
+        <View style={DetailStyles.section}>
+          <Text style={DetailStyles.headers}>DESCRIPTION</Text>
+          <Text style={DetailStyles.content}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales est nibh, ac
+            tristique nulla eleifend vitae. Aliquam arcu quam, pharetra ac ipsum non, rutrum.
+          </Text>
+        </View>
 
-          <View style={CardStyles.progressbar}>
-            <PeopleProgressBar
-              percentage={vFound/vNeeded * 100}
-              size="large"/>
-          </View>
-          <Text style={CardStyles.progress}><B>{vFound}</B> / {vNeeded} Volunteers</Text>
+        <View style={CardStyles.progressbar}>
+          <PeopleProgressBar percentage={(vFound / vNeeded) * 100} size="large"/>
+        </View>
+        <Text style={CardStyles.progress}>
+          <B>{vFound}</B> /{vNeeded} Volunteers
+        </Text>
 
-          <ActionButton
-            action="Volunteer"
-            color="#A45EC5"
-            textColor="#FFFFFF"/>
+        <ActionButton action="Volunteer" color="#A45EC5" textColor="#FFFFFF"
+        />
       </View>
->>>>>>> master
     </View>
   );
 }

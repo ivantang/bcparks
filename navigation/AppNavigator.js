@@ -27,7 +27,7 @@ export default createAppContainer(
       VolunteerComplete,
     },
     {
-      initialRouteName: 'VolunteerComplete',
+      initialRouteName: 'DonationComplete',
     },
   ),
 );

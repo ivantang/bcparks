@@ -3,26 +3,13 @@ import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function ActionButton(props) {
   return (
-<<<<<<< HEAD
     <TouchableOpacity
       onPress={() => {
-        props.navigation.navigate('VolunteerDetails', props);
+        props.navigation.navigate(props.navigation.getParam('navigateTo', 'LoginScreen'), props);
       }}
       style={[styles.button, { backgroundColor: props.color, },]}
     >
-      <View style={{ flexDirection: 'column', }}>
-        <View style={styles.points} />
-        <View style={styles.textView}>
-          <Text style={styles.buttonText}>{props.action}</Text>
-        </View>
-        <View style={styles.spacer} />
-      </View>
-=======
-    <TouchableOpacity onPress={() => {
-      props.navigation.navigate(props.navigation.getParam("navigateTo", "LoginScreen"), props);
-    }} style={[styles.button, {backgroundColor: props.color}]}>
-        <Text style={[styles.buttonText, {color: props.textColor}]}>{props.action}</Text>
->>>>>>> master
+      <Text style={[styles.buttonText, { color: props.textColor }]}>{props.action}</Text>
     </TouchableOpacity>
   );
 }
@@ -37,5 +24,5 @@ const styles = StyleSheet.create({
     fontFamily: 'roboto-bold',
     textAlign: 'center',
     fontSize: 20,
-  }
+  },
 });
