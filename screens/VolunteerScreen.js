@@ -9,7 +9,7 @@ import {
 
 import { MonoText } from '../components/StyledText';
 import { VolunteerCard } from '../components/VolunteerCard';
-import { Header } from '../components/Header';
+import { VolunteerHeader } from '../components/Header';
 
 import ScreenLayout from '../constants/Layout';
 
@@ -184,8 +184,9 @@ const PROJECTS = [
 export default function VolunteerScreen(props) {
   return (
     <ScrollView>
-      <Header backgroundColor="#A35EC4" regularText="Projects to " boldText="Volunteer" />
+      <VolunteerHeader />
       <FlatList
+        style={styles.container}
         data={PROJECTS}
         renderItem={({ item }) =>
           <VolunteerCard
@@ -210,9 +211,6 @@ VolunteerScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
-    margin: 10,
-    flex: 1,
-    backgroundColor: '#fff',
+    marginTop: -100
   },
 });

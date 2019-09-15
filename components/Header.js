@@ -16,7 +16,7 @@ import userscore from '../assets/images/UserScore.png';
 
 
 export function TestHeader() {
-    return VolunteerDetailHeader();
+    return DonateDetailHeader();
 }
 
 export function LoginHeader() {
@@ -40,7 +40,7 @@ export function VolunteerDetailHeader() {
 }
 
 export function LeaderBoardHeader() {
-    return <Header backgroundColor="#3EC1F0" dashboard={<LeaderBoardDashboard />} regularText="High " boldText="Scores"  /> /* leaderBoard */
+    return <Header backgroundColor="#3EC1F0" dashboard={<GenericDashboard />} regularText="High " boldText="Scores"  /> /* leaderBoard */
 }
 
 export function DonateHeader() {
@@ -52,7 +52,7 @@ export function DonateDetailHeader() {
 }
 
 export function IssueHeader() {
-return <Header backgroundColor="#DAD85D" dashboard={<IssueDashboard />} regularText="Report an " boldText="Issue"  /> /* issue */
+return <Header backgroundColor="#DAD85D" dashboard={<GenericDashboard />} regularText="Report an " boldText="Issue"  /> /* issue */
 }
 
 export function LoginDashboard() {
@@ -96,18 +96,6 @@ export function GenericDashboard() {
     )
 }
 
-// TODO
-export function LeaderBoardDashboard() {
-    //https://xd.adobe.com/spec/ae44f48a-4c0e-4219-439f-32cd25280a78-d875/screen/dab8a8c1-1a74-4fd1-bab7-e2d06c02d747/Leadearboard
-    return <Image style={styles.loginImage} source={logo} />
-}
-
-// TODO
-export function IssueDashboard() {
-    // https://xd.adobe.com/spec/ae44f48a-4c0e-4219-439f-32cd25280a78-d875/screen/1b250a3d-fa30-430e-8adf-c41ac350e3df/Report-an-issue
-    return <Image style={styles.loginImage} source={logo} />
-}
-
 
 export function HeaderTitle(props) {
     const { regularText, boldText } = props;
@@ -146,7 +134,6 @@ export function Header(props) {
 
 const styles = StyleSheet.create({
     container: {
-        // flexGrow: 1,
     },
     leaderboard: {
         alignSelf: 'stretch',

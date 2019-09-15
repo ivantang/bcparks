@@ -8,7 +8,7 @@ import {
 
 import { MonoText } from '../components/StyledText';
 import { DonationCard } from '../components/DonationCard';
-import { Header } from '../components/Header';
+import { DonateHeader } from '../components/Header';
 
 import ScreenLayout from '../constants/Layout';
 
@@ -165,8 +165,9 @@ const PROJECTS = [
 export default function DonationsScreen(props) {
   return (
     <ScrollView>
-      <Header backgroundColor="#66B13A" regularText="Projects to " boldText="Donate" />
+      <DonateHeader />
       <FlatList
+        style={styles.container}
         data={PROJECTS}
         renderItem={({ item }) =>
           <DonationCard
@@ -183,3 +184,9 @@ export default function DonationsScreen(props) {
 DonationsScreen.navigationOptions = {
   header: null,
 };
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: -100
+  },
+});

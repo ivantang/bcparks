@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, ScrollView } from 'react-native';
 
 import createdBy from '../assets/images/createdBy.png';
 
@@ -9,7 +9,7 @@ import DetailStyles from '../components/styles/Details'
 import { CardTitle } from '../components/CardTitle';
 import PeopleProgressBar from '../components/PeopleProgressBar';
 import ActionButton from '../components/ActionButton';
-import { Header } from '../components/Header';
+import { DonateDetailHeader } from '../components/Header';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 function calculatePercentage(found, needed) {
@@ -23,8 +23,8 @@ export default function DonationDetailsScreen(props) {
   const vNeeded = props.navigation.getParam('cashNeeded', 1);
 
   return (
-    <View>
-      <Header backgroundColor="#66B13A" />
+    <ScrollView>
+      <DonateDetailHeader />
 
       <View style={DetailStyles.container}>
         <CardTitle
@@ -57,6 +57,6 @@ export default function DonationDetailsScreen(props) {
             source={createdBy}
             style={CardStyles.createdby} />
       </View>
-    </View>
+    </ScrollView>
   );
 }

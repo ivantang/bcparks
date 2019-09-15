@@ -4,7 +4,7 @@ import { width, height } from '../../constants/Layout';
 export default detailstyles = StyleSheet.create({
   container: {
     paddingHorizontal: 65,
-    marginTop: 20,
+    marginTop: -125
   },
   headers: {
     color: '#ACACAC',

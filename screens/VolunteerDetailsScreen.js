@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, ScrollView } from 'react-native';
 
 import createdBy from '../assets/images/createdBy.png';
 
@@ -9,7 +9,7 @@ import DetailStyles from '../components/styles/Details';
 import { CardTitle } from '../components/CardTitle';
 import PeopleProgressBar from '../components/PeopleProgressBar';
 import ActionButton from '../components/ActionButton';
-import { Header } from '../components/Header';
+import { VolunteerDetailHeader } from '../components/Header';
 
 const B = props => <Text style={{ fontWeight: 'bold', }}>{props.children}</Text>;
 
@@ -18,8 +18,8 @@ export default function VolunteerDetailsScreen(props) {
   const vNeeded = props.navigation.getParam('volunteersNeeded', 1);
 
   return (
-    <View>
-      <Header backgroundColor="#A35EC4"/>
+    <ScrollView>
+      <VolunteerDetailHeader/>
 
       <View style={DetailStyles.container}>
         <CardTitle
@@ -54,6 +54,6 @@ export default function VolunteerDetailsScreen(props) {
               source={createdBy}
               style={CardStyles.createdby} />
       </View>
-    </View>
+    </ScrollView>
   );
 }
