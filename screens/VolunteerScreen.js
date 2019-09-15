@@ -2,11 +2,14 @@ import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import {
   FlatList,
-  StyleSheet
+  StyleSheet,
+  ScrollView
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
 import { VolunteerCard } from '../components/VolunteerCard';
+import { Header } from '../components/Header';
+
 
 import ScreenLayout from '../constants/Layout';
 
@@ -180,17 +183,21 @@ const PROJECTS = [
 
 export default function VolunteerScreen() {
   return (
-    <FlatList
-      data={PROJECTS}
-      renderItem={({ item }) =>
-        <VolunteerCard
-          title={item.title}
-          location={item.location}
-          date={item.date}
-          volunteersFound={item.volunteersFound}
-          volunteersNeeded={item.volunteersNeeded}
-          points={item.points} />}
-        keyExtractor={item => item.id} />
+    <ScrollView>
+      <Header backgroundColor="#A35EC4" regularText="Projects to " boldText="Volunteer" /> 
+      <FlatList
+        data={PROJECTS}
+        renderItem={({ item }) =>
+          <VolunteerCard
+            title={item.title}
+            location={item.location}
+            date={item.date}
+            volunteersFound={item.volunteersFound}
+            volunteersNeeded={item.volunteersNeeded}
+            points={item.points} />}
+          keyExtractor={item => item.id} />
+    </ScrollView>
+    
   );
 }
 
