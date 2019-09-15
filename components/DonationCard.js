@@ -4,6 +4,10 @@ import { ProgressBar, Colors } from 'react-native-paper';
 import { CardTitle } from './CardTitle';
 import CardStyles from './styles/Cards';
 
+function calculatePercentage(funded, needed) {
+  return funded && needed ? funded/needed : 0;
+}
+
 export function DonationCard(props) {
   return (
     <View style={CardStyles.card}>
@@ -13,7 +17,9 @@ export function DonationCard(props) {
 
       <View style={CardStyles.container}>
         <Text>{props.points} pts.</Text>
-        <ProgressBar progress={0.5} color={Colors.black} />
+        <ProgressBar
+          progress={calculatePercentage(props.cashFunded, props.cashNeeded)}
+          color={Colors.black} />
         <Text style={CardStyles.action}>DONATE</Text>
       </View>
     </View>
