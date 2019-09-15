@@ -3,7 +3,6 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import MainTabNavigator from './MainTabNavigator';
 import LoginScreen from '../screens/LoginScreen';
-import LandingScreen from '../screens/LandingScreen';
 import HomeScreen from '../screens/HomeScreen';
 import VolunteerScreen from '../screens/VolunteerScreen';
 import DonationScreen from '../screens/DonationScreen';
@@ -11,6 +10,8 @@ import VolunteerDetailsScreen from '../screens/VolunteerDetailsScreen';
 import DonationDetailsScreen from '../screens/DonationDetailsScreen';
 import DonationComplete from '../screens/DonationComplete';
 import VolunteerComplete from '../screens/VolunteerComplete';
+import HelpOutScreen from '../screens/HelpOutScreen';
+import LandingScreen from '../screens/LandingScreen'
 
 export default createAppContainer(
   createSwitchNavigator(
@@ -25,9 +26,11 @@ export default createAppContainer(
       DonationDetails: DonationDetailsScreen,
       DonationComplete,
       VolunteerComplete,
+      HelpOutScreen,
+      LandingScreen,
     },
     {
-      initialRouteName: 'DonationComplete',
+      initialRouteName: 'HelpOutScreen',
     },
   ),
 );

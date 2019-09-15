@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import HelpOutIcon from '../assets/images/Help.png';
 
 export default function ActionButton(props) {
   return (
@@ -9,6 +10,7 @@ export default function ActionButton(props) {
       }}
       style={[styles.button, { backgroundColor: props.color, },]}
     >
+      <Image source={props.imageSource} style={props.imageSource && styles.image} />
       <Text style={[styles.buttonText, { color: props.textColor }]}>{props.action}</Text>
     </TouchableOpacity>
   );
@@ -19,10 +21,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingVertical: 35,
     marginVertical: 20,
+    alignItems: 'center',
   },
   buttonText: {
     fontFamily: 'roboto-bold',
     textAlign: 'center',
     fontSize: 20,
+  },
+  image: {
+    marginBottom: 15,
   },
 });
