@@ -172,7 +172,6 @@ export default function DonationsScreen(props) {
           <DonationCard
             title={item.title}
             location={item.location}
-            points={item.points}
             cashFunded={item.cashFunded}
             cashNeeded={item.cashNeeded}
             navigation={props.navigation} />}
