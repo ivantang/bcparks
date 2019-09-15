@@ -5,7 +5,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-import { LoginHeader } from "../components/Header";
+import { TestHeader } from "../components/Header";
 import { LoginTextInput } from "../components/LoginTextInput";
 import { LoginButton } from "../components/LoginButton";
 
@@ -13,7 +13,7 @@ export default function LoginScreen(props) {
   return (
     <View style={{flex: 1, flexDirection: 'column'}}>
       <ScrollView>
-        <LoginHeader />
+        <TestHeader />
         <LoginTextInput placeholder="Username / Email" />
         <LoginTextInput placeholder="Password" />
         <LoginButton text="Sign In" backgroundColor="#66B13A" navigation={props.navigation} />
