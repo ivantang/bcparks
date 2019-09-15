@@ -195,9 +195,11 @@ export default function VolunteerScreen(props) {
             volunteersFound={item.volunteersFound}
             volunteersNeeded={item.volunteersNeeded}
             points={item.points}
-            navigation={props.navigation} />
-          }
-          keyExtractor={item => item.id} />
+            navigation={props.navigation}
+          />
+        }
+        keyExtractor={item => item.id}
+      />
     </ScrollView>
   );
 }

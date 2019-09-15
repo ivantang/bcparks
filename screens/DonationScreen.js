@@ -178,7 +178,6 @@ export default function DonationsScreen(props) {
             navigation={props.navigation} />}
           keyExtractor={item => item.id} />
     </ScrollView>
-
   );
 }
 

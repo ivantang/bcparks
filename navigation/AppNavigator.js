@@ -11,16 +11,19 @@ import VolunteerDetailsScreen from '../screens/VolunteerDetailsScreen';
 import DonationDetailsScreen from '../screens/DonationDetailsScreen';
 
 export default createAppContainer(
-  createSwitchNavigator({
-    // You could add another route here for authentication.
-    // Read more at https://reactnavigation.org/docs/en/auth-flow.html
-    Login: LoginScreen,
-    Home: HomeScreen,
-    VolunteerList: VolunteerScreen,
-    DonationList: DonationScreen,
-    VolunteerDetails: VolunteerDetailsScreen,
-    DonateDetails: DonationDetailsScreen,
-  },{
-    initialRouteName: "DonationList",
-  })
+  createSwitchNavigator(
+    {
+      // You could add another route here for authentication.
+      // Read more at https://reactnavigation.org/docs/en/auth-flow.html
+      Login: LoginScreen,
+      Home: HomeScreen,
+      VolunteerList: VolunteerScreen,
+      DonationList: DonationScreen,
+      VolunteerDetails: VolunteerDetailsScreen,
+      DonateDetails: DonationDetailsScreen,
+    },
+    {
+      initialRouteName: 'Login',
+    },
+  ),
 );
