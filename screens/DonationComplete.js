@@ -58,7 +58,7 @@ export default function DonationComplete({ navigation }) {
         <Image source={whitetreeIcon} style={styles.tree}/>
       </View>
       <View style={styles.actionButtonStyle}>
-        <ActionButton action="Back To Home" textColor="#66B13A" color="white" />
+        <ActionButton action="Back To Home" textColor="#66B13A" color="white" navigation={navigation} navigateTo='Home' />
       </View>
     </View>
   );

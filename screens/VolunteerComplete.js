@@ -58,7 +58,7 @@ export default function VolunteerComplete({ navigation }) {
         <Image source={whitetreeIcon} style={styles.tree}/>
       </View>
       <View style={styles.actionButtonStyle}>
-        <ActionButton action="Back To Home" textColor="#A35EC4" color="white" />
+        <ActionButton action="Back To Home" textColor="#A35EC4" color="white" navigation={navigation} navigateTo='Home' />
       </View>
     </View>
   );
