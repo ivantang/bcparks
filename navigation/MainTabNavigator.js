@@ -69,26 +69,43 @@ DonationsStack.navigationOptions = {
 DonationsStack.path = '';
 
 const SettingsStack = createStackNavigator(
-  {
-    Settings: SettingsScreen,
-  },
-  config
+    {
+        Settings: SettingsScreen,
+    },
+    config
 );
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
-  ),
+    tabBarLabel: 'Settings',
+    tabBarIcon: ({ focused }) => (
+        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+    ),
 };
 
 SettingsStack.path = '';
 
+const FormStack = createStackNavigator(
+    {
+        Form: FormScreen,
+    },
+    config
+);
+
+SettingsStack.navigationOptions = {
+    tabBarLabel: 'Form',
+    tabBarIcon: ({ focused }) => (
+        <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+    ),
+};
+
+FormStack.path = '';
+
 const tabNavigator = createBottomTabNavigator({
-  HomeStack,
-  VolunteerStack,
-  DonationsStack,
-  SettingsStack,
+    HomeStack,
+    VolunteerStack,
+    DonationsStack,
+    SettingsStack,
+    FormStack
 });
 
 tabNavigator.path = '';
