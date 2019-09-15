@@ -9,10 +9,10 @@ import {
 import logo from '../assets/images/LOGO.png';
 
 export function LoginHeader() {
-    // return <Header backgroundColor="#A7C62E" dashboard={<Image style={styles.image} source={logo} />} /> /* login */
+    return <Header backgroundColor="#A7C62E" dashboard={<Image style={styles.image} source={logo} />} /> /* login */
     // return <Header backgroundColor="#F8F8F8" regularText="Select a " boldText="Quest" /> /* landing */
     // return <Header backgroundColor="#F8F8F8" regularText="Select a " boldText="Task"  /> /* helpOut */
-    return <Header backgroundColor="#A35EC4" regularText="Projects to " boldText="Volunteer" /> /* volunteer */
+    // return <Header backgroundColor="#A35EC4" regularText="Projects to " boldText="Volunteer" /> /* volunteer */
     // return <Header backgroundColor="#A35EC4" /> /* volunteerDetail */
     // return <Header backgroundColor="#3EC1F0" regularText="High " boldText="Scores"  /> /* leaderBoard */
     // return <Header backgroundColor="#66B13A" regularText="Projects to " boldText="Donate" /> /* donate */
@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
         width: 327,
         height: 105,
         resizeMode: 'contain',
-        borderWidth: 1,
-        borderColor: 'black',
+        // borderWidth: 1,
+        // borderColor: 'black',
     },
     title: {
         flexDirection: 'row',
