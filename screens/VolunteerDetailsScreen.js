@@ -44,7 +44,7 @@ export default function VolunteerDetailsScreen(props) {
 
           <ActionButton
             action="Volunteer"
-            color="#A45EC5"
+            color="#A35EC4"
             textColor="#FFFFFF"/>
       </View>
     </View>
