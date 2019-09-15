@@ -19,7 +19,7 @@ export default cardstyles = StyleSheet.create({
   progressbar: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 10,
+    marginVertical: 10,
   },
   date: {
     alignItems: 'flex-end',
@@ -38,5 +38,10 @@ export default cardstyles = StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     marginBottom: 10,
+  },
+  createdby: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 20,
   }
 });
