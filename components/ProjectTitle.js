@@ -5,11 +5,16 @@ import forest from '../assets/images/Forest.png';
 
 export function ProjectTitle(props) {
   return (
-    <View>
-      <View style={TitleStyles.location}>
-        <Image source={forest} />
-        <Text style={TitleStyles.locationtext}>  {props.location}</Text>
+    <View style={TitleStyles.info}>
+      <View style={{
+        flexDirection: 'row',
+      }}>
+        <View style={TitleStyles.location}>
+          <Image source={forest} />
+          <Text style={TitleStyles.locationtext}>  {props.location}</Text>
+        </View>
       </View>
+      <Text style={TitleStyles.title}>{props.title}</Text>
     </View>
   );
 }

@@ -180,12 +180,3 @@ export default function DonationsScreen(props) {
 DonationsScreen.navigationOptions = {
   header: null,
 };
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-    margin: 10,
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});
