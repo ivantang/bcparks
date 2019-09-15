@@ -1,7 +1,7 @@
 import React from 'react';
 import {  TextInput, StyleSheet } from 'react-native';
 
-export function BWTextInput(props) {
+export function LoginTextInput(props) {
     const { placeholder, onChangeText } = props
     return (
       <TextInput style = {styles.style}

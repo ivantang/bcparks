@@ -4,15 +4,15 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import {BWTextInput} from "../components/BWTextInput";
+import { LoginTextInput } from "../components/LoginTextInput";
 
 
 
 export default function LoginScreen() {
   return (
     <View style={{flex: 1, flexDirection: 'column'}}>
-      <BWTextInput placeholder="Username / Email" />
-      <BWTextInput placeholder="Password" />
+      <LoginTextInput placeholder="Username / Email" />
+      <LoginTextInput placeholder="Password" />
     </View>
   );
 }
