@@ -6,24 +6,28 @@ import forest from '../assets/images/Forest.png';
 export function CardTitle(props) {
   return (
     <View style={styles.info}>
-      <View style={{
-        flexDirection: 'row',
-      }}>
-        <View style={{
+      <View
+        style={{
           flexDirection: 'row',
-          flex: 8,
-          paddingTop: 10,
-        }}>
+        }}
+      >
+        <View
+          style={{
+            flexDirection: 'row',
+            flex: 8,
+            paddingTop: 10,
+          }}
+        >
           <Image source={forest} />
-          <Text style={styles.location}>  {props.location}</Text>
+          <Text style={styles.location}> {props.location}</Text>
         </View>
 
         <View style={styles.pointbox}>
           <Image source={treePoint} />
-          <Text style={styles.points}> {props.points ? props.points : "1 = $1"}</Text>
+          <Text style={styles.points}> {props.points ? props.points : '1 = $1'}</Text>
         </View>
       </View>
-        <Text style={styles.title}>{props.title}</Text>
+      <Text style={styles.title}>{props.title}</Text>
     </View>
   );
 }
@@ -47,10 +51,10 @@ const styles = StyleSheet.create({
     paddingBottom: 3,
   },
   points: {
-    fontFamily: 'roboto-black',
+    fontFamily: 'roboto-medium',
     fontSize: 20,
     textShadowColor: '#000000',
-    textShadowOffset: {width: 0, height: 1},
+    textShadowOffset: { width: 0, height: 1, },
     textShadowRadius: 1,
     color: '#FFFFFF',
   },
@@ -63,5 +67,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
-  }
+  },
 });
