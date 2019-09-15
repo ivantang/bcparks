@@ -30,7 +30,8 @@ export default function DonationDetailsScreen(props) {
         <CardTitle
           title={props.navigation.getParam('title', 'REFRESH PAGE')}
           location={props.navigation.getParam('location', 'ERROR')}
-          points={props.navigation.getParam('points', undefined)} />
+          points={props.navigation.getParam('points', undefined)}
+        />
 
           <View style={DetailStyles.section}>
             <Text style={DetailStyles.headers}>DESCRIPTION</Text>

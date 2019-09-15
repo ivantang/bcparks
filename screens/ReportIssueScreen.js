@@ -3,9 +3,11 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { Dropdown } from 'react-native-material-dropdown';
 import { IssueHeader } from '../components/Header';
 
+import ActionButton from '../components/ActionButton';
+
 import React, { Component } from 'react';
 
-export default function FormScreen() {
+export default function FormScreen(props) {
     const [parkValue, onChangePark] = React.useState('Juniper Beach Provincial Park');
     const [descValue, onChangeDesc] = React.useState('Briefly Describe The Issue');
     const [volunteerValue, onChangeVolunteers] = React.useState('');
@@ -58,6 +60,16 @@ export default function FormScreen() {
                     placeholder={"Volunteers Needed"}
                 />
                 <View style={{flex:1}} />
+                <View style={{marginHorizontal:35}}>
+                  <ActionButton
+                    action="Submit"
+                    color="#DAD85D"
+                    textColor="#000000"
+                    navigateTo="LandingScreen"
+                    navigation={props.navigation}
+                  />
+                </View>
+
 
         </KeyboardAwareScrollView>
 

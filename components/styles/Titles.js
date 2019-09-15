@@ -32,7 +32,7 @@ export default titlestyles = StyleSheet.create({
     color: '#FFFFFF',
   },
   pointbox: {
-    flex: 2,
+    flex: 4,
     flexDirection: 'row',
     backgroundColor: '#FFD238',
     borderBottomLeftRadius: 10,
@@ -40,5 +40,6 @@ export default titlestyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
-  }
+    paddingHorizontal: 20,
+  },
 });

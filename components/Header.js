@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
       width: width,
     },
     userscore: {
-      marginLeft: 180,
+      marginLeft: 165,
     },
     back: {
       marginTop: 10,
