@@ -3,6 +3,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
+import { Header } from "../components/Header";
 import { LoginTextInput } from "../components/LoginTextInput";
 import { LoginButton } from "../components/LoginButton";
 
@@ -11,6 +12,9 @@ import { LoginButton } from "../components/LoginButton";
 export default function LoginScreen() {
   return (
     <View style={{flex: 1, flexDirection: 'column'}}>
+      <Header regularText="Select a " boldText="Task">
+        <LoginTextInput placeholder="test" />
+      </Header>
       <LoginTextInput placeholder="Username / Email" />
       <LoginTextInput placeholder="Password" />
       <LoginButton text="Sign In" backgroundColor="#66B13A" />
