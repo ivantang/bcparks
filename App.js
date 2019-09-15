@@ -30,6 +30,19 @@ db.transaction(tx => {tx.executeSql(
     "create table if not exists userIssues (placeholder text);"
 )})
 
+db.transaction(tx =>
+  {tx.executeSql(
+    "INSERT INTO users VALUES (001, 'Justin', 'Li', 0, 'justinli', 'jstnmhli@gmail.com', 'password');"
+  )})
+
+db.transaction(
+    tx => {
+      tx.executeSql("select * from users", [], (_, { rows }) =>
+          console.log(JSON.stringify(rows))
+      );
+    }
+);
+
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
