@@ -9,6 +9,8 @@ import VolunteerScreen from '../screens/VolunteerScreen';
 import DonationScreen from '../screens/DonationScreen';
 import VolunteerDetailsScreen from '../screens/VolunteerDetailsScreen';
 import DonationDetailsScreen from '../screens/DonationDetailsScreen';
+import DonationComplete from '../screens/DonationComplete';
+import VolunteerComplete from '../screens/VolunteerComplete';
 
 export default createAppContainer(
   createSwitchNavigator(
@@ -17,13 +19,16 @@ export default createAppContainer(
       // Read more at https://reactnavigation.org/docs/en/auth-flow.html
       Login: LoginScreen,
       Home: HomeScreen,
+      Landing: LandingScreen,
       VolunteerList: VolunteerScreen,
       DonationList: DonationScreen,
       VolunteerDetails: VolunteerDetailsScreen,
-      DonateDetails: DonationDetailsScreen,
+      DonationDetails: DonationDetailsScreen,
+      DonationComplete,
+      VolunteerComplete,
     },
     {
-      initialRouteName: 'Login',
+      initialRouteName: 'DonationComplete',
     },
   ),
 );
