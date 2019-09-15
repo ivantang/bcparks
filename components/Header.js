@@ -63,9 +63,11 @@ export function LoginDashboard() {
 export function WelcomeDashboard() {
     return (
         <View>
-            <Image source={leaderboard} />
-            <WelcomeTitle regularText="Welcome, " boldText="Username" />
-            <Image source={username} />
+            <Image source={leaderboard} style={styles.leaderboard} />
+            <View style={styles.profile}>
+              <WelcomeTitle regularText="Welcome, " boldText="Username" />
+              <Image source={username} />
+            </View>
         </View>
     );
 }
@@ -113,7 +115,7 @@ export function HeaderTitle(props) {
         <View style={styles.headerTitle}>
             <Text style={styles.regular}>{regularText}</Text>
             <Text style={styles.bold}>{boldText}</Text>
-        </View> 
+        </View>
     );
 }
 
@@ -123,16 +125,9 @@ export function WelcomeTitle(props) {
         <View style={styles.welcomeTitle}>
             <Text style={styles.regular}>{regularText}</Text>
             <Text style={styles.bold}>{boldText}</Text>
-        </View> 
+        </View>
     );
 }
-
-
-
-
-
-
-
 
 export function Header(props) {
     const { backgroundColor, dashboard } = props;
@@ -153,10 +148,16 @@ const styles = StyleSheet.create({
     container: {
         // flexGrow: 1,
     },
+    leaderboard: {
+        alignSelf: 'stretch',
+        position: 'absolute',
+    },
     dashboard: {
-        flex: 1,
-        paddingTop: 20,
+        paddingTop: 33,
         paddingBottom: 80,
+    },
+    profile: {
+        paddingTop: 100,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -164,7 +165,7 @@ const styles = StyleSheet.create({
         flex: 1,
         top: -60,
         backgroundColor: 'white',
-        borderTopLeftRadius: 60, 
+        borderTopLeftRadius: 60,
         borderTopRightRadius: 60,
     },
     loginImage:{
