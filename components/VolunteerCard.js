@@ -5,8 +5,10 @@ import CardStyles from './styles/Cards';
 import PeopleProgressBar from './PeopleProgressBar';
 
 function calculatePercentage(found, needed) {
-  return found/needed * 100;
+  return found && needed ? found/needed * 100 : "0";
 }
+
+const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>
 
 export function VolunteerCard(props) {
   return (
@@ -14,15 +16,18 @@ export function VolunteerCard(props) {
       <CardTitle
         title={props.title}
         location={props.location}
-        date={props.date} />
+        points={props.points} />
 
       <View style={CardStyles.container}>
-        <Text>{props.points} pts.</Text>
         <View style={CardStyles.progressbar}>
           <PeopleProgressBar
             percentage={calculatePercentage(props.volunteersFound, props.volunteersNeeded)} />
         </View>
-        <Text style={CardStyles.action}>VOLUNTEER</Text>
+        <Text style={CardStyles.progress}><B>{props.volunteersFound}</B> / {props.volunteersNeeded} Volunteers</Text>
+      </View>
+
+      <View style={CardStyles.date}>
+        <Text style={CardStyles.datetext}>{props.date}</Text>
       </View>
     </View>
   );
