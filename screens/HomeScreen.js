@@ -13,20 +13,25 @@ import {
 import { MonoText } from '../components/StyledText';
 import { VolunteerCard } from '../components/VolunteerCard';
 import { DonationCard } from '../components/DonationCard';
+import {ActionSelect} from "../components/ActionSelect";
+
+const data = {
+  buttonData: {
+    firstButton: {
+      title: 'Donate',
+      link: ''
+    },
+    secondButton: {
+      title: 'Volunteer',
+      link: ''
+    }
+  }
+}
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <VolunteerCard
-        title="SOMETHING"
-        location="SOMEWHERE"
-        points="100"
-        date="November 2, 2019" />
-
-      <DonationCard
-        title="SOMETHING"
-        location="SOMEWHERE"
-        points="100" />
+      <ActionSelect firstButton={data.buttonData.firstButton} secondButton={data.buttonData.secondButton}/>
     </View>
   );
 }
