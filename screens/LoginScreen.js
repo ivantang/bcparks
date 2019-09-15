@@ -6,14 +6,12 @@ import {
 import { LoginTextInput } from "../components/LoginTextInput";
 import { LoginButton } from "../components/LoginButton";
 
-
-
-export default function LoginScreen() {
+export default function LoginScreen(props) {
   return (
     <View style={{flex: 1, flexDirection: 'column'}}>
       <LoginTextInput placeholder="Username / Email" />
       <LoginTextInput placeholder="Password" />
-      <LoginButton text="Sign In" backgroundColor="#66B13A" />
+      <LoginButton text="Sign In" backgroundColor="#66B13A" navigation={props.navigation} />
       <LoginButton icon="google-plus" text="Sign In With Google" backgroundColor="#EC402C" />
       <LoginButton icon="facebook-f" text="Sign In With Facebook" backgroundColor="#0037C1" />
       <LoginButton text="Sign Up" backgroundColor="#3EC1F0" />

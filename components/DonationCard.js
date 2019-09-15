@@ -12,8 +12,8 @@ const B = (props) => <Text style={{fontWeight: 'bold'}}>{props.children}</Text>;
 
 export function DonationCard(props) {
   return (
-    <TouchableOpacity onPress={(event) => {
-        props.navigation.navigate('DonateDetails', { id: props.id });
+    <TouchableOpacity onPress={() => {
+      props.navigation.navigate('DonateDetails');
     }}>
       <View style={CardStyles.card}>
         <CardTitle
