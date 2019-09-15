@@ -4,14 +4,11 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-<<<<<<< HEAD
+
 import LoginScreen from '../screens/LoginScreen';
-import VolunteerScreen from '../screens/VolunteerListScreen';
-import DonationsScreen from '../screens/DonationsListScreen';
-=======
 import VolunteerScreen from '../screens/VolunteerScreen';
 import DonationScreen from '../screens/DonationScreen';
->>>>>>> screen-navigation
+
 import SettingsScreen from '../screens/SettingsScreen';
 
 const config = Platform.select({
