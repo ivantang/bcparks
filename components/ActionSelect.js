@@ -8,11 +8,11 @@ export function ActionSelect(props){
         <View style={{flex: 1, justifyContent: "flex-end", alignItems: "stretch"}}>
             <View style={{height: 300, backgroundColor: 'steelblue'}}>
                 <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={() => props.navigation.navigate('DonationList')}>
-                    <Text style={{ fontFamily: 'roboto-black', fontSize: 15 }}>{props.firstButton.title}</Text>
+                    <Text style={{ fontFamily: 'roboto-medium', fontSize: 15 }}>{props.firstButton.title}</Text>
                 </Icon.Button>
 
                 <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={() => props.navigation.navigate('VolunteerList')}>
-                    <Text style={{ fontFamily: 'roboto-black', fontSize: 15 }}>{props.secondButton.title}</Text>
+                    <Text style={{ fontFamily: 'roboto-medium', fontSize: 15 }}>{props.secondButton.title}</Text>
                 </Icon.Button>
             </View>
         </View>
