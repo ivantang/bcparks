@@ -21,6 +21,6 @@ export default createAppContainer(
     VolunteerDetails: VolunteerDetailsScreen,
     DonateDetails: DonationDetailsScreen,
   },{
-    initialRouteName: "VolunteerList"
+    initialRouteName: "DonationList",
   })
 );

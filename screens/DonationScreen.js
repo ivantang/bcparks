@@ -174,7 +174,8 @@ export default function DonationsScreen(props) {
             location={item.location}
             points={item.points}
             cashFunded={item.cashFunded}
-            cashNeeded={item.cashNeeded} />}
+            cashNeeded={item.cashNeeded}
+            navigation={props.navigation} />}
           keyExtractor={item => item.id} />
     </ScrollView>
 
