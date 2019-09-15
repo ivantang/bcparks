@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
         paddingBottom: 80,
     },
     profile: {
-        paddingTop: 100,
+        paddingTop: 40,
         justifyContent: 'center',
         alignItems: 'center',
     },
