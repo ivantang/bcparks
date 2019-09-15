@@ -10,9 +10,18 @@ import {
   View,
 } from 'react-native';
 
-import { MonoText } from '../components/StyledText';
 import { VolunteerCard } from '../components/VolunteerCard';
 import { DonationCard } from '../components/DonationCard';
+import UserExperienceBadge from '../components/UserExperienceBadge';
+
+const data = {
+  user: {
+    id: 123,
+    Fname: 'Bobby',
+    Lname: 'Tree',
+    points: 301
+  }
+}
 
 export default function HomeScreen() {
   return (
@@ -20,13 +29,15 @@ export default function HomeScreen() {
       <VolunteerCard
         title="SOMETHING"
         location="SOMEWHERE"
-        points="100"
+        points={data.user.points}
         date="November 2, 2019" />
 
       <DonationCard
         title="SOMETHING"
         location="SOMEWHERE"
-        points="100" />
+        points={data.user.points} />
+
+      <UserExperienceBadge points={data.user.points} />
     </View>
   );
 }
