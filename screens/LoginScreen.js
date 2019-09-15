@@ -22,7 +22,7 @@ export default function LoginScreen(props) {
             <Icon.Button
                 style={{padding: 20}}
                 backgroundColor={'#66B13A'}
-                onPress={() => props.navigation.navigate('Home')}>
+                onPress={() => props.navigation.navigate('LandingScreen')}>
                 <Text
                     style={{fontSize: 20, color: 'white'}}
                     iconStyle={{align: 'center'}}
@@ -34,7 +34,7 @@ export default function LoginScreen(props) {
                 name='google'
                 backgroundColor={'#EC402C'}
 
-                onPress={() => props.navigation.navigate('Home')}>
+                onPress={() => props.navigation.navigate('LandingScreen')}>
                 <Text
                     style={{fontSize: 20, color: 'white'}}
                     iconStyle={{align: 'center'}}
@@ -45,7 +45,7 @@ export default function LoginScreen(props) {
                 style={{padding: 20}}
                 name='facebook'
                 backgroundColor={'#0037C1'}
-                onPress={() => props.navigation.navigate('Home')}>
+                onPress={() => props.navigation.navigate('LandingScreen')}>
                 <Text
                     style={{fontSize: 20, color: 'white'}}
                     iconStyle={{align: 'center'}}
