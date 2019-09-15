@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import HelpOutIcon from '../assets/images/Help.png';
 
 export default function ActionButton(props) {
+  const { navigateTo } = props;
   return (
     <TouchableOpacity
       onPress={() => {
-        props.navigation.navigate(props.navigation.getParam('navigateTo', 'LoginScreen'), props);
+        props.navigation.navigate(navigateTo, props);
       }}
       style={[styles.button, { backgroundColor: props.color, },]}
     >

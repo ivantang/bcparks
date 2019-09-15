@@ -1,35 +1,48 @@
 import React from 'react';
-import { Text, View , StyleSheet} from 'react-native';
+import { Text, View , StyleSheet, ScrollView} from 'react-native';
 import ActionButton from '../components/ActionButton';
 import { HelpOutHeader } from '../components/Header';
 
-import HelpOutIcon from '../assets/images/Help.png';
-import ReportIssueIcon from '../assets/images/Issue.png';
+import DonationIcon from '../assets/images/Donation.png';
+import VolunteerIcon from '../assets/images/Volunteer.png';
 
 const styles = StyleSheet.create({
   actionButtonStyle: {
     width: 300,
-    marginTop: 10,
+    marginTop: 5,
+  },
+  actionButtons: {
+    alignItems: 'center',
+    marginTop: -100,
   },
 })
 
-export default function HelpOutScreen() {
+export default function HelpOutScreen(props) {
   return (
-    <View>
+    <ScrollView>
       <HelpOutHeader />
-      <View style={{ alignItems: 'center', }}>
+      <View style={styles.actionButtons}>
         <View style={styles.actionButtonStyle}>
-          <ActionButton action="Help Out" imageSource={HelpOutIcon} color="#3EC1F0" />
+          <ActionButton
+            action="Donate"
+            imageSource={DonationIcon}
+            color="#66B13A"
+            textColor="white"
+            navigateTo='DonationList'
+            navigation={props.navigation}
+          />
         </View>
         <View style={styles.actionButtonStyle}>
           <ActionButton
-            action="Report an Issue"
-            imageSource={ReportIssueIcon}
-            color="#A7C62E"
+            action="Volunteer"
+            imageSource={VolunteerIcon}
+            color="#A45EC5"
             textColor="white"
+            navigateTo='VolunteerList'
+            navigation={props.navigation}
           />
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
