@@ -2,15 +2,25 @@ import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import MainTabNavigator from './MainTabNavigator';
+import LoginScreen from '../screens/LoginScreen';
+import LandingScreen from '../screens/LandingScreen';
+import HomeScreen from '../screens/HomeScreen';
+import VolunteerScreen from '../screens/VolunteerScreen';
+import DonationScreen from '../screens/DonationScreen';
+import VolunteerDetailsScreen from '../screens/VolunteerDetailsScreen';
 import DonationDetailsScreen from '../screens/DonationDetailsScreen';
 
 export default createAppContainer(
   createSwitchNavigator({
     // You could add another route here for authentication.
     // Read more at https://reactnavigation.org/docs/en/auth-flow.html
-    Main: MainTabNavigator,
+    Login: LoginScreen,
+    Home: HomeScreen,
+    VolunteerList: VolunteerScreen,
+    DonationList: DonationScreen,
+    VolunteerDetails: VolunteerDetailsScreen,
     DonateDetails: DonationDetailsScreen,
   },{
-    initialRouteName: "Main"
+    initialRouteName: "VolunteerList"
   })
 );

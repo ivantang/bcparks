@@ -13,7 +13,7 @@ import {
 import { MonoText } from '../components/StyledText';
 import { VolunteerCard } from '../components/VolunteerCard';
 import { DonationCard } from '../components/DonationCard';
-import {ActionSelect} from "../components/ActionSelect";
+import { ActionSelect } from "../components/ActionSelect";
 
 const data = {
   buttonData: {
@@ -28,10 +28,10 @@ const data = {
   }
 }
 
-export default function HomeScreen() {
+export default function HomeScreen(props) {
   return (
     <View style={styles.container}>
-      <ActionSelect firstButton={data.buttonData.firstButton} secondButton={data.buttonData.secondButton}/>
+      <ActionSelect firstButton={data.buttonData.firstButton} secondButton={data.buttonData.secondButton} navigation={props.navigation}/>
     </View>
   );
 }

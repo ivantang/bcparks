@@ -40,7 +40,7 @@ export default function PeopleProgressBar(props) {
   return (
     <View style={styles.container}>
       {peopleIconBarObjects(percentageToNumber(percentage)).map((item, id) => (
-        <PersonIcon key={id} personType={item} style={styles.personIconStyle} />
+        <PersonIcon key={id} personType={item} size={props.size} style={styles.personIconStyle} />
       ))}
     </View>
   );

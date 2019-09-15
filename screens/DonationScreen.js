@@ -160,7 +160,7 @@ const PROJECTS = [
   }
 ]
 
-export default function DonationsScreen() {
+export default function DonationsScreen(props) {
   return (
     <FlatList
       data={PROJECTS}
@@ -171,7 +171,8 @@ export default function DonationsScreen() {
           location={item.location}
           points={item.points}
           cashFunded={item.cashFunded}
-          cashNeeded={item.cashNeeded} />}
+          cashNeeded={item.cashNeeded}
+          navigation={props.navigation} />}
         keyExtractor={item => item.id} />
   );
 }
@@ -179,12 +180,3 @@ export default function DonationsScreen() {
 DonationsScreen.navigationOptions = {
   header: null,
 };
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-    margin: 10,
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});
