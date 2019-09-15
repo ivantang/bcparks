@@ -52,6 +52,7 @@ export default function DonationDetailsScreen(props) {
             action="Donate"
             color="#66B13A"
             textColor="#FFFFFF"
+            points={100}
             navigateTo="DonationComplete"
             navigation={props.navigation}/>
 

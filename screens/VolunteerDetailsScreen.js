@@ -49,6 +49,7 @@ export default function VolunteerDetailsScreen(props) {
             action="Volunteer"
             color="#A35EC4"
             textColor="#FFFFFF"
+            points={props.navigation.getParam('points', '0')}
             navigateTo="VolunteerComplete"
             navigation={props.navigation}/>
 

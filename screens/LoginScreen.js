@@ -13,7 +13,7 @@ import bgImage from '../assets/images/loginbg.png';
 export default function LoginScreen(props) {
   return (
       <ImageBackground source={bgImage} style={{width: '100%', height: '110%'}}>
-      <View style={{marginHorizontal: 30}}>
+      <View style={{marginHorizontal: 30, marginTop: 60}}>
               <View style={{margin:115}}></View>
           <LoginTextInput placeholder="Username / Email" />
             <View style={{margin:4}}></View>
