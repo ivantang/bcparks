@@ -1,3 +1,10 @@
+# GOAL
+To mobilize and empower people who want to keep parks beautiful
+
+# This app solves these Obstacles
+* Limited budget & staff
+* Volunteers aren’t sure what to do & where
+
 # Get Started
 
 ## First Time Install
